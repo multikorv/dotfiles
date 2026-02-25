@@ -73,3 +73,7 @@ require('lspconfig')['rust_analyzer'].setup({
 require('lspconfig')['omnisharp'].setup({
     capabilities = capabilities
 })
+
+require('lspconfig')['clangd'].setup({
+    capabilities = capabilities
+})
