@@ -1,15 +1,21 @@
-local lsp_config = require('lspconfig')
+--local lsp_config = require('lspconfig')
+local lsp_config = vim.lsp
 
-lsp_config.tsserver.setup({})
-lsp_config.pyright.setup({})
-lsp_config.lua_ls.setup({})
-lsp_config.pico8_ls.setup({})
+--lsp_config.tsserver.setup({})
+lsp_config.enable('tsserver')
+--lsp_config.pyright.setup({})
+lsp_config.enable('pyright')
+--lsp_config.lua_ls.setup({})
+lsp_config.enable('lua_ls')
+--lsp_config.pico8_ls.setup({})
+lsp_config.enable('pico8_ls')
 
 -- TODO: Make plaform/env agnostic
 -- only work from powershell
 --local pid = vim.fn.getpid()
 --local omnisharp_bin = '/home/mutanton/.local/share/nvim/mason/packages/omnisharp-mono/run'
-lsp_config.omnisharp.setup({
+--lsp_config.omnisharp.setup({
+lsp_config.config('omnisharp', {
     --[[
     flags = {
         debounce_text_changes = 150
@@ -27,7 +33,10 @@ lsp_config.omnisharp.setup({
     use_mono = true,
 })
 
-lsp_config.rust_analyzer.setup({
+lsp_config.enable('omnisharp')
+
+--lsp_config.rust_analyzer.setup({
+lsp_config.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {
             check = {
@@ -39,6 +48,8 @@ lsp_config.rust_analyzer.setup({
         }
     }
 })
+
+lsp_config.enable('rust_analyzer')
 
 -- **** clangd ****
 
@@ -102,8 +113,8 @@ local function symbol_info(bufnr, client)
     end, bufnr)
 end
 
-
-lsp_config.clangd.setup({
+--lsp_config.clangd.setup({
+lsp_config.config('clangd', {
     cmd = { 'clangd', '--completion-style=detailed' },
     filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
     root_markers = {
@@ -143,6 +154,8 @@ lsp_config.clangd.setup({
         end, { desc = 'Show symbol info' })
   end,
 })
+
+lsp_config.enable('clangd')
 -- **** ****
 
 -- Global mappings.

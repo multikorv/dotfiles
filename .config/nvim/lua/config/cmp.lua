@@ -103,14 +103,17 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['rust_analyzer'].setup({
+--require('lspconfig')['rust_analyzer'].setup({
+vim.lsp.config('rust_analyzer', {
     capabilities = capabilities
 })
 
-require('lspconfig')['omnisharp'].setup({
+--require('lspconfig')['omnisharp'].setup({
+vim.lsp.config('omnisharp', {
     capabilities = capabilities
 })
 
-require('lspconfig')['clangd'].setup({
+--require('lspconfig')['clangd'].setup({
+vim.lsp.config('clangd', {
     capabilities = capabilities
 })
