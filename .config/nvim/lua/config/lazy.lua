@@ -18,6 +18,7 @@ require('lazy').setup({
         'nvim-treesitter/nvim-treesitter', 
         build = ':TSUpdate'
     },
+    'nvim-treesitter/nvim-treesitter-context', 
 
     -- Mason is essentially core and is used heavily together wiht LSP
     'williamboman/mason.nvim',
