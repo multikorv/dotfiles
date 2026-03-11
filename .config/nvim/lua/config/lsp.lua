@@ -9,27 +9,16 @@ lsp_config.enable('pyright')
 lsp_config.enable('lua_ls')
 --lsp_config.pico8_ls.setup({})
 lsp_config.enable('pico8_ls')
+lsp_config.enable('groovyls')
 
 -- TODO: Make plaform/env agnostic
 -- only work from powershell
---local pid = vim.fn.getpid()
---local omnisharp_bin = '/home/mutanton/.local/share/nvim/mason/packages/omnisharp-mono/run'
---lsp_config.omnisharp.setup({
 lsp_config.config('omnisharp', {
-    --[[
-    flags = {
-        debounce_text_changes = 150
-    },
-    ]] --
-    --cmd = { omnisharp_bin, '--languageserver', '--hostPID', tostring(pid) },
-    --root_dir = lsp_config.util.root_pattern('*.csproj', '*.sln');
     cmd = {
         'mono',
         '--assembly-loader=strict',
         'OmniSharp.exe',
     },
-    --root_dir = lsp_config.util.root_pattern('*.csproj', '*.sln');
-    --on_attach = on_attach,
     use_mono = true,
 })
 
@@ -113,7 +102,6 @@ local function symbol_info(bufnr, client)
     end, bufnr)
 end
 
---lsp_config.clangd.setup({
 lsp_config.config('clangd', {
     cmd = { 'clangd', '--completion-style=detailed' },
     filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
@@ -158,7 +146,7 @@ lsp_config.config('clangd', {
 lsp_config.enable('clangd')
 -- **** ****
 
--- Global mappings.
+-- *** Global mappings ***
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
