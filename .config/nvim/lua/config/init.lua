@@ -6,6 +6,8 @@ require("config.lazy")
 require("config.mason")
 require("config.treesitter")
 require("config.telescope")
+require("config.mini")
+require("config.oil")
 require("config.lsp")
 require("config.cmp")
 

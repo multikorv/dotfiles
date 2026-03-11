@@ -15,10 +15,14 @@ require('lazy').setup({
     -- Common dependency
     'nvim-lua/plenary.nvim',
     {
-        'nvim-treesitter/nvim-treesitter', 
+        'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'
     },
-    'nvim-treesitter/nvim-treesitter-context', 
+    'nvim-treesitter/nvim-treesitter-context',
+    {
+        'nvim-mini/mini.nvim', 
+        version = '*',
+    },
 
     -- Mason is essentially core and is used heavily together wiht LSP
     'williamboman/mason.nvim',
@@ -29,6 +33,13 @@ require('lazy').setup({
 
     -- Git stuff
     'lewis6991/gitsigns.nvim',
+
+    -- File system plugin
+    {
+        'stevearc/oil.nvim',
+        dependencies = 'nvim-mini/mini.icons',
+    },
+    'refractalize/oil-git-status.nvim',
 
     -- CMP and related plugins
     'hrsh7th/nvim-cmp',
