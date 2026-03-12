@@ -12,6 +12,7 @@ require("config.luasnip")
 require("config.mini")
 require("config.oil")
 require("config.lsp")
+require("config.tiny_inline_diagnostic")
 require("config.cmp")
 
 require("config.feel")

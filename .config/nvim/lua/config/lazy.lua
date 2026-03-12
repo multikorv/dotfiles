@@ -31,6 +31,25 @@ require('lazy').setup({
         lazy = false 
     },
 
+    -- *** LSP ***
+    -- LSP - essential obviously
+    'neovim/nvim-lspconfig',
+
+    -- Icons for lsp
+    'onsails/lspkind.nvim',
+
+    -- Prettier display of LSP issues
+    {
+        'rachartier/tiny-inline-diagnostic.nvim',
+        event = "VeryLazy",
+        priority = 1000,
+        config = function()
+            require("tiny-inline-diagnostic").setup()
+            vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
+        end,
+    },
+    -- *** ***
+
     -- For setting up lualsp for vim
     {
         'folke/lazydev.nvim',
@@ -48,7 +67,7 @@ require('lazy').setup({
     'refractalize/oil-git-status.nvim',
 
 
-    -- CMP and related plugins
+    -- *** CMP ***
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-nvim-lua',
@@ -57,9 +76,7 @@ require('lazy').setup({
     'saadparwaiz1/cmp_luasnip',
     'hrsh7th/cmp-cmdline',
     'dmitmel/cmp-cmdline-history',
-
-    -- Icons for lsp
-    'onsails/lspkind.nvim',
+    -- *** ***
 
     -- Snippet engine for lua
     {
@@ -69,9 +86,6 @@ require('lazy').setup({
         -- install jsregexp (optional!).
         build = "make install_jsregexp"
     },
-
-    -- LSP - essential obviously
-    'neovim/nvim-lspconfig',
 
     -- Trouble - helps with issues and actions
     'folke/trouble.nvim',
@@ -101,6 +115,7 @@ require('lazy').setup({
             'nvim-lua/plenary.nvim' 
         }
     },
+   
     -- Themes, colors and feel
     'folke/tokyonight.nvim',
     { 
