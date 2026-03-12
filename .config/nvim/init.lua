@@ -6,4 +6,3 @@ else
     require("environment")
     require("config")
 end
-

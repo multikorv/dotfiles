@@ -1,13 +1,8 @@
---local lsp_config = require('lspconfig')
 local lsp_config = vim.lsp
 
---lsp_config.tsserver.setup({})
 lsp_config.enable('tsserver')
---lsp_config.pyright.setup({})
 lsp_config.enable('pyright')
---lsp_config.lua_ls.setup({})
 lsp_config.enable('lua_ls')
---lsp_config.pico8_ls.setup({})
 lsp_config.enable('pico8_ls')
 lsp_config.enable('groovyls')
 
@@ -24,7 +19,6 @@ lsp_config.config('omnisharp', {
 
 lsp_config.enable('omnisharp')
 
---lsp_config.rust_analyzer.setup({
 lsp_config.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {
@@ -183,7 +177,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
 
         vim.keymap.set('n', '<leader>rr', vim.lsp.buf.rename, opts)
-        vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+        -- Using tiny code actions instead
+        --vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
 
         vim.keymap.set('n', '<leader>f', function()
                 vim.lsp.buf.format { async = true }
@@ -194,7 +189,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- Specific for getting pico8-ls client to start
-
 vim.api.nvim_create_autocmd({'BufNew', 'BufEnter'}, {
     pattern = { '*.p8' },
     callback = function(args)

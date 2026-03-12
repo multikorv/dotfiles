@@ -20,7 +20,7 @@ require('lazy').setup({
     },
     'nvim-treesitter/nvim-treesitter-context',
     {
-        'nvim-mini/mini.nvim', 
+        'nvim-mini/mini.nvim',
         version = '*',
     },
 
@@ -47,6 +47,17 @@ require('lazy').setup({
             require("tiny-inline-diagnostic").setup()
             vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
         end,
+    },
+
+    -- Better code action overview and preview
+    {
+        'rachartier/tiny-code-action.nvim',
+        dependencies = {
+            { 'nvim-lua/plenary.nvim' },
+            { 'nvim-telescope/telescope.nvim' },
+        },
+        event = 'LspAttach',
+        opts = {},
     },
     -- *** ***
 
@@ -115,7 +126,7 @@ require('lazy').setup({
             'nvim-lua/plenary.nvim' 
         }
     },
-   
+
     -- Themes, colors and feel
     'folke/tokyonight.nvim',
     { 
