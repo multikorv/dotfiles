@@ -7,6 +7,3 @@ else
     require("config")
 end
 
-if end
-
-
