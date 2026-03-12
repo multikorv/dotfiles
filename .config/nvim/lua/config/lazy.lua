@@ -31,6 +31,12 @@ require('lazy').setup({
         lazy = false 
     },
 
+    -- For setting up lualsp for vim
+    {
+        'folke/lazydev.nvim',
+        ft = 'lua',
+    },
+
     -- Git stuff
     'lewis6991/gitsigns.nvim',
 
@@ -40,6 +46,7 @@ require('lazy').setup({
         dependencies = 'nvim-mini/mini.icons',
     },
     'refractalize/oil-git-status.nvim',
+
 
     -- CMP and related plugins
     'hrsh7th/nvim-cmp',
