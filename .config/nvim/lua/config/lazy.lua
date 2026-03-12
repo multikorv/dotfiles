@@ -66,6 +66,14 @@ require('lazy').setup({
     -- LSP - essential obviously
     'neovim/nvim-lspconfig',
 
+    -- Trouble - helps with issues and actions
+    'folke/trouble.nvim',
+    {
+        "folke/trouble.nvim",
+        opts = {}, -- for default options, refer to the configuration section for custom setup.
+        cmd = "Trouble",
+    },
+
     -- Status line
     'famiu/feline.nvim',
 
