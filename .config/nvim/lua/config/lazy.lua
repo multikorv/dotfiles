@@ -51,6 +51,9 @@ require('lazy').setup({
     'hrsh7th/cmp-cmdline',
     'dmitmel/cmp-cmdline-history',
 
+    -- Icons for lsp
+    'onsails/lspkind.nvim',
+
     -- Snippet engine for lua
     {
         "L3MON4D3/LuaSnip",
