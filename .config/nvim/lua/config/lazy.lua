@@ -61,12 +61,6 @@ require('lazy').setup({
     },
     -- *** ***
 
-    -- For setting up lualsp for vim
-    {
-        'folke/lazydev.nvim',
-        ft = 'lua',
-    },
-
     -- Git stuff
     'lewis6991/gitsigns.nvim',
 

@@ -2,7 +2,6 @@
 require('config.options')
 
 require('config.lazy')
-require('config.lazydev')
 
 require('config.mason')
 require('config.treesitter')
