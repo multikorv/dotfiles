@@ -24,10 +24,13 @@ require('lazy').setup({
         version = '*',
     },
 
+    -- Icon dependency used by multiple plugins
+    'nvim-tree/nvim-web-devicons',
+
     -- Mason is essentially core and is used heavily together wiht LSP
     'williamboman/mason.nvim',
     {
-        'williamboman/mason-lspconfig.nvim', 
+        'williamboman/mason-lspconfig.nvim',
         lazy = false 
     },
 
@@ -102,6 +105,13 @@ require('lazy').setup({
 
     -- Status line
     'famiu/feline.nvim',
+
+    -- Tab visualization
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    },
 
     -- Telescope fuzzy finder is essential
     {

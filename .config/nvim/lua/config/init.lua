@@ -16,6 +16,7 @@ require('config.tiny_inline_diagnostic')
 require('config.tiny_code_action')
 require('config.cmp')
 
+require('config.bufferline')
 require('config.feel')
 require('config.gitsigns')
 require('config.feline')
