@@ -2,9 +2,22 @@ local lsp_config = vim.lsp
 
 lsp_config.enable('tsserver')
 lsp_config.enable('pyright')
-lsp_config.enable('lua_ls')
 lsp_config.enable('pico8_ls')
 lsp_config.enable('groovyls')
+
+
+lsp_config.config('lua_ls', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                -- Avoid undefined global errors in vim config files
+                globals = { "vim" }
+            }
+        }
+    }
+})
+
+lsp_config.enable('lua_ls')
 
 -- TODO: Make plaform/env agnostic
 -- only work from powershell
