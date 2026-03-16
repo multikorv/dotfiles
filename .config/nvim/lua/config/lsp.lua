@@ -4,7 +4,7 @@ lsp_config.enable('tsserver')
 lsp_config.enable('pyright')
 lsp_config.enable('pico8_ls')
 lsp_config.enable('groovyls')
-
+lsp_config.enable('bashls')
 
 lsp_config.config('lua_ls', {
     settings = {
@@ -32,6 +32,7 @@ lsp_config.config('omnisharp', {
 
 lsp_config.enable('omnisharp')
 
+
 lsp_config.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {
@@ -46,6 +47,7 @@ lsp_config.config('rust_analyzer', {
 })
 
 lsp_config.enable('rust_analyzer')
+
 
 -- **** clangd ****
 
@@ -151,6 +153,8 @@ lsp_config.config('clangd', {
 })
 
 lsp_config.enable('clangd')
+
+
 -- **** ****
 
 -- *** Global mappings ***
@@ -214,3 +218,4 @@ vim.api.nvim_create_autocmd({'BufNew', 'BufEnter'}, {
         })
     end
 })
+
