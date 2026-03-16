@@ -1,10 +1,11 @@
 local lsp_config = vim.lsp
 
-lsp_config.enable('tsserver')
+--lsp_config.enable('tsserver')
 lsp_config.enable('pyright')
 lsp_config.enable('pico8_ls')
 lsp_config.enable('groovyls')
 lsp_config.enable('bashls')
+
 
 lsp_config.config('lua_ls', {
     settings = {

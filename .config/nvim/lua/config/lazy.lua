@@ -18,14 +18,15 @@ require('lazy').setup({
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'
     },
+
+    -- Requires a nerd font to work properly, essentially a font patched with glyph support
+    { "nvim-tree/nvim-web-devicons", opts = {} },
+
     'nvim-treesitter/nvim-treesitter-context',
     {
         'nvim-mini/mini.nvim',
         version = '*',
     },
-
-    -- Icon dependency used by multiple plugins
-    'nvim-tree/nvim-web-devicons',
 
     -- Mason is essentially core and is used heavily together wiht LSP
     'williamboman/mason.nvim',
@@ -106,28 +107,22 @@ require('lazy').setup({
     -- Status line
     'famiu/feline.nvim',
 
-    -- Tab visualization
-    {
-        'akinsho/bufferline.nvim',
-        version = "*",
-        dependencies = 'nvim-tree/nvim-web-devicons'
-    },
-
     -- Telescope fuzzy finder is essential
     {
-        'nvim-telescope/telescope.nvim', 
-        --tag = '0.1.8', 
-        dependencies = 
+        'nvim-telescope/telescope.nvim',
+        --tag = '0.1.8',
+        dependencies =
         { 
-            'nvim-lua/plenary.nvim' 
+            'nvim-lua/plenary.nvim',
+            'nvim-tree/nvim-web-devicons',
         }
     },
     {
         'nvim-telescope/telescope-file-browser.nvim',
-        dependencies = 
-        { 
-            'nvim-telescope/telescope.nvim', 
-            'nvim-lua/plenary.nvim' 
+        dependencies =
+        {
+            'nvim-telescope/telescope.nvim',
+            'nvim-lua/plenary.nvim'
         }
     },
 
