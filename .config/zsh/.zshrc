@@ -21,9 +21,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE="$ZDOTDIR"/.zsh_history
 
-# Setup ls color theme
-source "$ZDOTDIR"/lscolor-theme-jellybeans
-
 # Use modern completion system
 autoload -Uz compinit
 compinit
@@ -48,7 +45,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 source "$ZDOTDIR"/zsh_themes/powerlevel10k/powerlevel10k.zsh-theme
 
-export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+# Setup ls color theme
+source -- "$ZDOTDIR"/lscolor-theme-jellybeans
+
 # Enable color by default
 alias ls='ls --color=auto -hv'
 alias grep='grep --color=auto'
