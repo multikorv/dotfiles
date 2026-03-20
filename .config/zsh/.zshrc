@@ -21,6 +21,9 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE="$ZDOTDIR"/.zsh_history
 
+# Setup ls color theme
+source "$ZDOTDIR"/lscolor-theme-jellybeans
+
 # Use modern completion system
 autoload -Uz compinit
 compinit
