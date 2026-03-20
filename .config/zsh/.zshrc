@@ -45,6 +45,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 source "$ZDOTDIR"/zsh_themes/powerlevel10k/powerlevel10k.zsh-theme
 
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 # Enable color by default
 alias ls='ls --color=auto -hv'
 alias grep='grep --color=auto'
