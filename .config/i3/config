@@ -37,8 +37,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# this does not work, i3 seem to be using ibus so i changed the settings with ibus-setup
-#exec --no-startup-id setxkbmap -layout se,se -variant svdvorak,se -model pc105 -option 'grp:alt_shift_toggle'
+# This is not needed, set up ibus to allow system default, which is set in /etc/default/keyboard
+#exec --no-startup-id setxkbmap -layout se -variant ma_dvorak -model pc105
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
