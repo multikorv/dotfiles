@@ -409,9 +409,9 @@ xkb_symbols "ma_dvorak" {
   key <AC02> {[          o,            O,     bracketleft,            none]};
   key <AC03> {[          e,            E,    bracketright,            none]};
 
-  key <AB02> {[      comma,         less,       braceleft,            none]};
-  key <AB03> {[     period,      greater,      braceright,            none]};
+  key <AD02> {[      comma,         less,       braceleft,            none]};
+  key <AD03> {[     period,      greater,      braceright,            none]};
  
   key <AC05> {[          i,            I,       ampersand,            none]};
-  key <AD04> {[          k,            K,        asterisk,            none]};
+  key <AB04> {[          k,            K,        asterisk,            none]};
 };
