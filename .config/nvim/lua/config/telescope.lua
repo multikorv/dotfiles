@@ -9,12 +9,13 @@ vim.keymap.set('n', '<leader>th', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>td', builtin.diagnostics, {})
 
 -- open file_browser with the path of the current buffer
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>to',
-  ':Telescope file_browser path=%:p:h select_buffer=true<CR>',
-  { noremap = true }
-)
+-- DISABLED, using oil
+--vim.api.nvim_set_keymap(
+--  'n',
+--  '<leader>to',
+--  ':Telescope file_browser path=%:p:h select_buffer=true auto_depth=true<CR>',
+--  { noremap = true }
+--)
 
 -- open file_browser over nvim config files
 vim.api.nvim_set_keymap(
