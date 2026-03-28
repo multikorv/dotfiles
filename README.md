@@ -1,3 +1,7 @@
+# Tmux
+Install the tmux tpm  plugin manager according to instructions in order to use the file provided
+at the time of writing this you need to install the plugins using <prefix> + I in tmux
+
 # Terminal
 ## Kitty 
 To make nvim colors work nicely
