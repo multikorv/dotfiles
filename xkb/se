@@ -413,5 +413,5 @@ xkb_symbols "ma_dvorak" {
   key <AD03> {[     period,      greater,      braceright,            none]};
  
   key <AC05> {[          i,            I,       ampersand,            none]};
-  key <AB04> {[          k,            K,        asterisk,            none]};
+  key <AD04> {[          p,            P,        asterisk,            none]};
 };
