@@ -19,4 +19,4 @@ require('config.cmp')
 
 require('config.feel')
 require('config.gitsigns')
-require('config.feline')
+require('config.lualine')

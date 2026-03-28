@@ -105,7 +105,10 @@ require('lazy').setup({
     },
 
     -- Status line
-    'famiu/feline.nvim',
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    },
 
     -- Telescope fuzzy finder is essential
     {
