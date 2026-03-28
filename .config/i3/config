@@ -18,6 +18,10 @@ font pango:monospace 8
 gaps inner 1
 gaps outer 1
 
+bar {
+    binding_mode_indicator no
+}
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -203,11 +207,11 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # class                 border  bground text    indicator child_border
-client.focused          #3D3863 #282A3E #FFFFFF #2E9EF4   #3D3863
-client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
-client.unfocused        #333333 #282A2E #888888 #292D2E   #222222
-client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.focused          #3D3863 #282A3E #FFFFFF #3D38630  #3D3863
+client.focused_inactive #333333 #5F676A #FFFFFF #3D38630  #5F676A
+client.unfocused        #333333 #282A2E #888888 #3D38630  #222222
+client.urgent           #2F343A #900000 #FFFFFF #3D38630  #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #3D38630  #0C0C0C
 
 client.background       #FFFFFF
 
