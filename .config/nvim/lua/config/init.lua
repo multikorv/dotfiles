@@ -1,6 +1,7 @@
 -- Options must be sourced first
 require('config.options')
 require('config.keymap')
+require('config.filetypes')
 
 require('config.lazy')
 

@@ -2,7 +2,6 @@ local lsp_config = vim.lsp
 
 --lsp_config.enable('tsserver')
 lsp_config.enable('pyright')
-lsp_config.enable('pico8_ls')
 lsp_config.enable('groovyls')
 lsp_config.enable('bashls')
 
@@ -19,6 +18,18 @@ lsp_config.config('lua_ls', {
 })
 
 lsp_config.enable('lua_ls')
+
+lsp_config.config('pico8_ls', {
+    cmd = { 'pico8-ls', '--stdio' },
+    filetypes = { 'p8' },
+    root_dir = function(bufnr, on_dir)
+        local fname = vim.api.nvim_buf_get_name(bufnr)
+        on_dir(util.root_pattern('*.p8')(fname))
+    end,
+    settings = {},
+})
+
+lsp_config.enable('pico8_ls')
 
 -- TODO: Make plaform/env agnostic
 -- only work from powershell
