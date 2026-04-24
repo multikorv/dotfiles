@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = { 'lua_ls', 'rust_analyzer', 'pico8_ls', 'clangd', 'groovyls', 'bashls' }
+    ensure_installed = { 'lua_ls', 'rust_analyzer', 'pico8_ls', 'clangd', 'groovyls', 'bashls', 'basedpyright' }
 })
 --[[
 ---@class MasonSettings

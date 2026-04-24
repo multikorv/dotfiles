@@ -1,7 +1,7 @@
 local lsp_config = vim.lsp
 
 --lsp_config.enable('tsserver')
-lsp_config.enable('pyright')
+lsp_config.enable('basedpyright')
 lsp_config.enable('groovyls')
 lsp_config.enable('bashls')
 
